@@ -1,4 +1,4 @@
-# Moadop Herbal Tea — conversion landing page
+# Moadop Herbal Tea, conversion landing page
 
 A rebuilt, mobile-first landing page for Moadop Herbal Tea, replacing the long-form
 sales letter at `moadop.com/tst/`.
@@ -90,6 +90,36 @@ GitHub Pages, repository Settings → Pages → deploy from `master`, root.
 
 To go live on the real domain, point `moadop.com` at Pages and add a `CNAME` file
 containing `moadop.com`. The form then posts to the CRM automatically.
+
+## Mobile
+
+Most traffic arrives from Facebook, Instagram and TikTok on a phone, so the small screen
+is the primary layout. Specifically handled:
+
+- Tested at 360px and 375px with no horizontal overflow
+- Tap targets at 44px minimum, including footer links and the FAQ rows
+- The tall WhatsApp screenshots are capped and expand on tap, instead of running to
+  650px each and burying the rest of the page
+- Inputs are 16px so iOS does not zoom on focus
+- Sticky order bar sized for one thumb, with safe-area inset for notched phones
+- A separate breakpoint at 360px, and one for landscape phones
+
+## SEO
+
+- `Product`, `FAQPage`, `Organization`, `WebSite` and `BreadcrumbList` JSON-LD
+- `shippingDetails` and `hasMerchantReturnPolicy` on the offer, which is what Google needs
+  for free-delivery and returns annotations in shopping results
+- Full meta set, Open Graph with image dimensions, Twitter card, geo tags for Nigeria
+- Delivery section naming the cities people actually search with ("buy in Port Harcourt"),
+  which is real buyer information rather than keyword stuffing
+- Self-hosted fonts, preloaded hero image, lazy images, YouTube facades, no render-blocking
+  third-party requests
+
+## Assumption to confirm
+
+The returns schema states a 30 day window, taken from the 30-day guarantee badge used on
+the current site. If the real window differs, change `merchantReturnDays` in the JSON-LD
+and the FAQ answer together.
 
 ## Before launch
 

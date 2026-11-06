@@ -278,6 +278,14 @@ p{margin:0 0 1em}
 .packcta{display:flex;flex-direction:column;align-items:center;gap:12px;margin-top:38px;text-align:center}
 .packcta span{font-size:13.4px;color:var(--muted)}
 
+/* ---------- DELIVERY ---------- */
+.deliv{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:900px){.deliv{grid-template-columns:1fr}}
+.deliv__card{background:var(--cream);border:1px solid var(--line);border-radius:var(--r-lg);padding:24px 22px;position:relative}
+.deliv__card h3{font-size:1.18rem;margin:0 0 10px;color:var(--green-700)}
+.deliv__where{margin:0 0 14px;font-size:14.6px;line-height:1.62;color:var(--body)}
+.deliv__tag{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);background:var(--white);border:1px solid var(--line);border-radius:999px;padding:5px 12px}
+
 /* ---------- GUARANTEE ---------- */
 .guarantee{background:var(--green-800);background-image:radial-gradient(ellipse 50% 60% at 15% 50%,rgba(201,153,46,.18),transparent 60%)}
 .guarantee__in{display:grid;grid-template-columns:200px 1fr;gap:42px;align-items:center}
@@ -383,3 +391,146 @@ body.has-sticky{padding-bottom:74px}
 .rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.3,1)}
 .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none}}
+
+/* =====================================================================
+   MOBILE REFINEMENT
+   Most of this traffic arrives from Facebook, Instagram and TikTok on a
+   phone, so the small screen is the primary layout, not an afterthought.
+   ===================================================================== */
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .sect{padding:52px 0}
+
+  /* type scale: tighter, so headlines never eat the fold */
+  .hero h1{font-size:clamp(2.05rem,8.6vw,2.6rem);letter-spacing:-.025em}
+  .lede{font-size:1rem;line-height:1.58}
+  .h2{font-size:clamp(1.6rem,6.4vw,2rem);max-width:none}
+  .sub{font-size:1rem;margin-bottom:30px}
+  .kicker{font-size:11px;letter-spacing:.16em}
+  .subhead{font-size:1.15rem;margin:38px 0 16px}
+
+  /* ticker: smaller and faster so it reads as a strip, not a wall */
+  .ticker{font-size:10.5px}
+  .ticker__track{padding:7px 0;animation-duration:26s}
+  .ticker__track span{padding:0 13px}
+
+  /* nav: bigger tap area for the brand */
+  .nav__in{height:60px}
+  .brand{padding:6px 0;min-height:44px;align-items:center}
+  .brand__txt{font-size:18px}
+
+  /* hero */
+  .hero__in{padding:34px 16px 44px;gap:30px}
+  .eyebrow{font-size:10.5px;padding:6px 12px;margin-bottom:16px;letter-spacing:.13em}
+  .ticks li{font-size:14.5px;padding-left:27px}
+  .hero__shot{max-width:100%}
+  .hero__cap{left:10px;bottom:12px;padding:9px 14px}
+  .hero__cap strong{font-size:16px}
+  .hero__cap span{font-size:10px}
+
+  /* price block stacks full width, CTA is thumb sized */
+  .pricebox{padding:17px 18px;gap:14px;border-radius:16px}
+  .pricebox__now{font-size:2.3rem}
+  .pricebox__act{width:100%;margin-left:0}
+  .btn--lg{width:100%;padding:16px 24px;font-size:16.5px}
+  .paybar{gap:7px 16px;font-size:12.2px}
+
+  /* assurance tiles */
+  .assure__item{padding:18px 10px}
+  .assure__item h3{font-size:1.2rem}
+  .assure__item p{font-size:12px}
+
+  /* cards and ingredients */
+  .card{padding:20px 18px;border-radius:16px}
+  .ing{grid-template-columns:52px 1fr;gap:14px;padding:16px 0}
+  .ing__pct{font-size:1rem;padding:6px 0}
+  .ing h3{font-size:1rem}
+  .ing p{font-size:14px}
+  .formula__side{position:static}
+  .spec{padding:20px}
+  .spec dl>div{font-size:12.8px;gap:10px}
+
+  /* steps */
+  .step{padding:22px 20px}
+  .step__n{font-size:2rem}
+  .herbstrip{gap:8px}
+
+  /* reviews: cap the tall WhatsApp screenshots so they do not
+     swallow the whole screen, and let the visitor tap to expand */
+  .chatgrid{grid-template-columns:1fr 1fr;gap:10px}
+  .chatgrid figure{position:relative}
+  .chatgrid img{max-height:310px;object-fit:cover;object-position:top}
+  .chatgrid figure::after{
+    content:'Tap to read';position:absolute;left:0;right:0;bottom:34px;
+    padding:26px 10px 8px;font-size:11px;font-weight:700;text-align:center;
+    color:var(--green-800);letter-spacing:.06em;text-transform:uppercase;
+    background:linear-gradient(transparent,rgba(255,255,255,.96) 62%);
+    pointer-events:none;
+  }
+  .chatgrid figure.open img{max-height:none}
+  .chatgrid figure.open::after{display:none}
+  .chatgrid figcaption{padding:8px 10px;font-size:11px}
+  .audio{padding:13px 15px}
+  .audiogrid,.vidgrid{gap:10px}
+  .disclaimer{padding:16px 18px;font-size:13.2px;margin-top:28px}
+
+  /* verify */
+  .regno{padding:18px 20px}
+  .regno strong{font-size:1.5rem}
+  .copybtn{margin-left:0;min-height:44px;padding:10px 18px}
+
+  /* packages: full width rows, price and saving on one line */
+  .packs{gap:12px}
+  .pack__in{padding:22px 18px 18px;border-radius:16px}
+  .pack__qty{font-size:1.3rem}
+  .pack__price{font-size:1.8rem}
+  .packcta{margin-top:28px}
+
+  /* guarantee */
+  .guarantee__row span{font-size:12.4px;padding:7px 14px}
+
+  /* faq: bigger hit area */
+  .faq summary{padding:16px 46px 16px 18px;font-size:15.4px;min-height:44px}
+  .faq details>div{padding:0 18px 17px}
+  .faq details p{font-size:14.6px}
+
+  /* order form */
+  .order{padding:20px 16px;border-radius:16px}
+  .order__step legend{font-size:1.05rem}
+  .field input,.field select,.field textarea{padding:13px 14px}
+  .btn--xl{padding:17px 24px;font-size:17px}
+  .paylogos{gap:18px;margin-top:22px}
+  .paylogos img{height:42px}
+
+  /* sticky bar sized for one thumb */
+  .sticky{padding:9px 14px calc(9px + env(safe-area-inset-bottom));gap:10px}
+  .sticky__info strong{font-size:1.15rem}
+  .sticky__info span{font-size:10.8px}
+  .sticky .btn{padding:12px 20px;font-size:14.5px;min-height:44px;white-space:nowrap}
+  body.has-sticky{padding-bottom:68px}
+
+  /* footer: links as a tappable list */
+  .foot{padding:40px 0 26px}
+  .foot__in{gap:22px;padding-bottom:22px}
+  .foot__nav{gap:0;width:100%;flex-direction:column}
+  .foot__nav a{padding:11px 0;min-height:44px;display:flex;align-items:center;border-bottom:1px solid rgba(255,255,255,.08)}
+  .foot__legal{font-size:11.8px}
+}
+
+/* very small handsets */
+@media (max-width:360px){
+  .wrap{padding:0 14px}
+  .hero h1{font-size:1.95rem}
+  .pricebox__now{font-size:2.05rem}
+  .assure__item h3{font-size:1.08rem}
+  .chatgrid{grid-template-columns:1fr}
+  .chatgrid img{max-height:380px}
+  .sticky__info strong{font-size:1.05rem}
+}
+
+/* landscape phones: keep the hero from filling the screen */
+@media (max-height:520px) and (orientation:landscape){
+  .hero__in{padding:26px 16px 32px}
+  .hero__shot{max-width:300px}
+}

@@ -137,6 +137,23 @@
     });
   });
 
+  /* ---------- tall WhatsApp screenshots expand on tap (mobile) ---------- */
+  $$('.chatgrid figure').forEach(function (fig) {
+    var img = fig.querySelector('img');
+    if (!img) return;
+    fig.setAttribute('role', 'button');
+    fig.setAttribute('tabindex', '0');
+    fig.setAttribute('aria-expanded', 'false');
+    var toggle = function () {
+      var open = fig.classList.toggle('open');
+      fig.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    fig.addEventListener('click', toggle);
+    fig.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+    });
+  });
+
   /* ---------- copy NAFDAC number ---------- */
   $$('.copybtn').forEach(function (b) {
     b.addEventListener('click', function () {

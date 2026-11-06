@@ -16,15 +16,29 @@
 <meta property="og:title" content="Moadop Herbal Tea | NAFDAC-Registered Eye Wellness Tea">
 <meta property="og:description" content="Seven botanicals, led by Eyebright and Ginkgo biloba, formulated to support clear and healthy vision. NAFDAC A7-102324L. Pay on delivery across Nigeria.">
 <meta property="og:image" content="https://moadop.com/assets/img/product-main.png">
+<meta property="og:image:width" content="648">
+<meta property="og:image:height" content="648">
+<meta property="og:image:alt" content="Moadop Herbal Tea pack, front and back, showing the NAFDAC number and full composition">
 <meta property="og:url" content="https://moadop.com/">
+<meta property="product:price:amount" content="18500">
+<meta property="product:price:currency" content="NGN">
+<meta property="product:availability" content="in stock">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Moadop Herbal Tea | NAFDAC-Registered Eye Wellness Tea">
 <meta name="twitter:description" content="Seven botanicals for clear and healthy vision. NAFDAC A7-102324L. Pay on delivery across Nigeria.">
 <meta name="twitter:image" content="https://moadop.com/assets/img/product-main.png">
 
+<meta name="geo.region" content="NG">
+<meta name="geo.placename" content="Nigeria">
+<meta name="author" content="Moadop Global Ltd">
+<meta name="rating" content="general">
+
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/fraunces.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/product-main.png" as="image" fetchpriority="high">
+<link rel="preconnect" href="https://i.ytimg.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube-nocookie.com" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 
 <script type="application/ld+json">
@@ -83,8 +97,52 @@
         "availability": "https://schema.org/InStock",
         "url": "https://moadop.com/#order",
         "seller": { "@id": "https://moadop.com/#org" },
-        "areaServed": "NG"
+        "areaServed": "NG",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0",
+            "currency": "NGN"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "NG"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 1,
+              "maxValue": 4,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "NG",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnWindow",
+          "merchantReturnDays": 30,
+          "returnMethod": "https://schema.org/ReturnByMail",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
       }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://moadop.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://moadop.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Moadop Herbal Tea", "item": "https://moadop.com/#product" },
+        { "@type": "ListItem", "position": 3, "name": "Order", "item": "https://moadop.com/#order" }
+      ]
     },
     {
       "@type": "FAQPage",
@@ -147,12 +205,12 @@
 
 <div class="ticker" role="region" aria-label="Key assurances">
   <div class="ticker__track">
-    <span>NAFDAC Registered &mdash; A7-102324L</span><i></i>
+    <span>NAFDAC Registered A7-102324L</span><i></i>
     <span>Free Delivery Nationwide</span><i></i>
     <span>Pay On Delivery Available</span><i></i>
     <span>Money Back Guarantee</span><i></i>
     <span>20 Tea Bags Per Pack</span><i></i>
-    <span>NAFDAC Registered &mdash; A7-102324L</span><i></i>
+    <span>NAFDAC Registered A7-102324L</span><i></i>
     <span>Free Delivery Nationwide</span><i></i>
     <span>Pay On Delivery Available</span><i></i>
     <span>Money Back Guarantee</span><i></i>
@@ -172,6 +230,7 @@
       <a href="#formula">Formula</a>
       <a href="#reviews">Reviews</a>
       <a href="#verify">NAFDAC</a>
+      <a href="#delivery">Delivery</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn--sm nav__cta" href="#order" data-track="nav_cta">Order Now</a>
@@ -188,15 +247,15 @@
       <p class="eyebrow"><span class="dot"></span> NAFDAC Registered &middot; A7-102324L</p>
       <h1>Clear, healthy vision.<br><span class="hl">Two cups a day.</span></h1>
       <p class="lede">
-        Moadop Herbal Tea blends seven botanicals &mdash; led by Eyebright, Ginkgo biloba
-        and Bitter Kola &mdash; into a daily routine that supports your eyes through the
+        Moadop Herbal Tea blends seven botanicals, led by Eyebright, Ginkgo biloba
+        and Bitter Kola, into a daily routine that supports your eyes through the
         strain of screens, sun, dust and age.
       </p>
 
       <ul class="ticks">
         <li>Registered with NAFDAC as a herbal nutraceutical</li>
         <li>Seven botanicals, nothing else added</li>
-        <li>20 tea bags &mdash; morning and evening, after meals</li>
+        <li>20 tea bags, morning and evening, after meals</li>
       </ul>
 
       <div class="pricebox">
@@ -316,7 +375,7 @@
         <article class="ing">
           <span class="ing__pct">40%</span>
           <div>
-            <h3>Euphrasia officinalis <em>&mdash; Eyebright</em></h3>
+            <h3>Euphrasia officinalis <em>(Eyebright)</em></h3>
             <p>The largest share of the blend, and the reason it exists. Eyebright earned its
             common name over centuries of European herbal practice centred specifically on
             eye comfort.</p>
@@ -327,14 +386,14 @@
           <div>
             <h3>Ginkgo biloba</h3>
             <p>One of the most studied botanicals in the world, widely used for its role in
-            supporting healthy microcirculation &mdash; the fine network of vessels that serves
+            supporting healthy microcirculation, the fine network of vessels that serves
             the eye.</p>
           </div>
         </article>
         <article class="ing">
           <span class="ing__pct">10%</span>
           <div>
-            <h3>Curcuma longa <em>&mdash; Turmeric</em></h3>
+            <h3>Curcuma longa <em>(Turmeric)</em></h3>
             <p>The source of curcumin, among the most heavily researched plant antioxidants,
             valued for supporting the body's normal inflammatory balance.</p>
           </div>
@@ -342,16 +401,16 @@
         <article class="ing">
           <span class="ing__pct">10%</span>
           <div>
-            <h3>Daucus carota <em>&mdash; Carrot</em></h3>
+            <h3>Daucus carota <em>(Carrot)</em></h3>
             <p>The best known natural source of beta-carotene, which the body converts to
-            vitamin A &mdash; a nutrient genuinely essential to normal vision, especially in
+            vitamin A, a nutrient genuinely essential to normal vision, especially in
             low light.</p>
           </div>
         </article>
         <article class="ing">
           <span class="ing__pct">10%</span>
           <div>
-            <h3>Foeniculum <em>&mdash; Fennel</em></h3>
+            <h3>Foeniculum <em>(Fennel)</em></h3>
             <p>Used for generations across North Africa and the Mediterranean as a gentle,
             soothing herb for tired eyes.</p>
           </div>
@@ -359,7 +418,7 @@
         <article class="ing">
           <span class="ing__pct">5%</span>
           <div>
-            <h3>Garcinia kola <em>&mdash; Bitter Kola</em></h3>
+            <h3>Garcinia kola <em>(Bitter Kola)</em></h3>
             <p>A West African botanical long held in high regard in Nigerian traditional
             medicine, and a subject of ongoing research at Nigerian universities for its
             activity in the eye.</p>
@@ -368,7 +427,7 @@
         <article class="ing">
           <span class="ing__pct">5%</span>
           <div>
-            <h3>Camellia sinensis <em>&mdash; Green Tea</em></h3>
+            <h3>Camellia sinensis <em>(Green Tea)</em></h3>
             <p>Rich in catechins, the antioxidant compounds that help the body defend its
             cells against everyday oxidative stress.</p>
           </div>
@@ -575,6 +634,50 @@
   </div>
 </section>
 
+<!-- ================= DELIVERY ================= -->
+<section class="sect" id="delivery">
+  <div class="wrap">
+    <p class="kicker">Getting it to you</p>
+    <h2 class="h2">Free delivery to all 36 states and the FCT.</h2>
+    <p class="sub">
+      Our team calls to confirm your order and agree a delivery window before anything
+      leaves the warehouse. In most locations you pay the dispatch rider when the pack is
+      in your hand.
+    </p>
+
+    <div class="deliv">
+      <article class="deliv__card">
+        <h3>1 to 2 working days</h3>
+        <p class="deliv__where">Lagos, Abuja (FCT), Ibadan, Abeokuta, Ikeja, Lekki, Ikorodu, Ota</p>
+        <span class="deliv__tag">Fastest routes</span>
+      </article>
+      <article class="deliv__card">
+        <h3>2 to 4 working days</h3>
+        <p class="deliv__where">
+          Port Harcourt, Benin City, Enugu, Onitsha, Aba, Owerri, Uyo, Calabar, Warri,
+          Asaba, Akure, Ilorin, Osogbo, Ado-Ekiti, Abakaliki, Awka, Umuahia, Yenagoa
+        </p>
+        <span class="deliv__tag">South and South East</span>
+      </article>
+      <article class="deliv__card">
+        <h3>2 to 4 working days</h3>
+        <p class="deliv__where">
+          Kano, Kaduna, Jos, Maiduguri, Sokoto, Zaria, Katsina, Bauchi, Gombe, Yola,
+          Minna, Lokoja, Makurdi, Lafia, Jalingo, Birnin Kebbi, Dutse, Damaturu, Gusau
+        </p>
+        <span class="deliv__tag">North</span>
+      </article>
+    </div>
+
+    <p class="smallprint">
+      Delivery is free nationwide. Timings are typical working-day estimates from the day
+      your order is confirmed on the phone, not guarantees, and public holidays and
+      weather can add a day. We also ship to customers in Ghana, Kenya and Uganda.
+      Ask our team for timings outside Nigeria.
+    </p>
+  </div>
+</section>
+
 <!-- ================= GUARANTEE ================= -->
 <section class="sect guarantee">
   <div class="wrap guarantee__in">
@@ -649,7 +752,7 @@
     <h2 class="h2 h2--light">Place your order.</h2>
     <p class="sub sub--light">
       Fill this in and our team will call you to confirm the order and your delivery window.
-      Keep your phone close &mdash; we usually call within minutes.
+      Keep your phone close. We usually call within minutes.
     </p>
 
     <form class="order" id="orderForm" method="post" action="https://app.moadopcrm.com/orders/webhook/" novalidate>
@@ -682,10 +785,10 @@
         <div class="field">
           <label for="package">Package</label>
           <select name="package" id="package" required>
-            <option value="20">1 Pack &mdash; &#8358;18,500 (10 days)</option>
-            <option value="21">2 Packs &mdash; &#8358;29,500 (20 days, Couple's Pack)</option>
-            <option value="22" selected>3 Packs &mdash; &#8358;43,500 (full 30 day routine)</option>
-            <option value="23">4 Packs &mdash; &#8358;54,500 (40 days)</option>
+            <option value="20">1 Pack, &#8358;18,500 (10 days)</option>
+            <option value="21">2 Packs, &#8358;29,500 (20 days, Couple's Pack)</option>
+            <option value="22" selected>3 Packs, &#8358;43,500 (full 30 day routine)</option>
+            <option value="23">4 Packs, &#8358;54,500 (40 days)</option>
           </select>
         </div>
         <div class="field">
@@ -752,6 +855,7 @@
       <a href="#how">How to use</a>
       <a href="#reviews">Reviews</a>
       <a href="#verify">NAFDAC</a>
+      <a href="#delivery">Delivery</a>
       <a href="#faq">FAQ</a>
       <a href="#order">Order</a>
     </nav>
