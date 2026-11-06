@@ -115,6 +115,25 @@ is the primary layout. Specifically handled:
 - Self-hosted fonts, preloaded hero image, lazy images, YouTube facades, no render-blocking
   third-party requests
 
+## Performance
+
+Measured locally with everything scrolled and loaded:
+
+| | |
+| --- | --- |
+| Whole page transfer | ~704 KB |
+| Hero image | 71 KB |
+| DOMContentLoaded | ~250 ms |
+| Image requests | 29 |
+
+Every rendered image is WebP. Converting the set cut 4.8 MB to 694 KB, an 86% saving,
+with the hero alone going from 544 KB to 71 KB. That matters more here than usual,
+because most of this traffic is social-referred on Nigerian mobile data.
+
+`product-main.png` is deliberately kept even though no `<img>` uses it. It is the
+`og:image` and the Product schema image, and WebP previews are still unreliable in some
+WhatsApp and crawler versions. It is never downloaded by a normal visitor.
+
 ## Recent order notifications
 
 `assets/data/recent-orders.json` drives the notification in the bottom-left. It is meant
