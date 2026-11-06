@@ -142,7 +142,7 @@ p{margin:0 0 1em}
 .assure__in{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0 22px}
 .assure__item{padding:30px 24px;border-right:1px solid rgba(255,255,255,.08);text-align:center}
 .assure__item:last-child{border-right:none}
-.assure__item h3{font-size:1.45rem;color:var(--gold-lt);margin:0 0 5px;font-weight:700;letter-spacing:-.02em}
+.assure__num{font-family:var(--f-disp);font-size:1.45rem;color:var(--gold-lt);margin:0 0 5px;font-weight:700;letter-spacing:-.02em;line-height:1.12}
 .assure__item p{margin:0;font-size:13.2px;color:#9dbaa8;line-height:1.5}
 @media (max-width:760px){
   .assure__in{grid-template-columns:1fr 1fr}
@@ -216,8 +216,11 @@ p{margin:0 0 1em}
 .spec dd strong{color:var(--gold-lt)}
 
 /* ---------- STEPS ---------- */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:0}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:26px}
 @media (max-width:820px){.steps{grid-template-columns:1fr}}
+.herbstrip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.herbstrip img{border-radius:var(--r);aspect-ratio:1;object-fit:cover;width:100%;border:1px solid rgba(255,255,255,.14)}
+@media (max-width:620px){.herbstrip{grid-template-columns:repeat(5,1fr);gap:7px}}
 .step{background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-lg);padding:28px 24px}
 .step__n{font-family:var(--f-disp);font-size:2.3rem;color:var(--gold-lt);font-weight:700;display:block;line-height:1;margin-bottom:12px;opacity:.9}
 .step h3{color:#fff;font-size:1.18rem;margin:0 0 8px}
@@ -528,7 +531,7 @@ body.has-sticky{padding-bottom:74px}
 
   /* assurance tiles */
   .assure__item{padding:18px 10px}
-  .assure__item h3{font-size:1.2rem}
+  .assure__num{font-size:1.2rem}
   .assure__item p{font-size:12px}
 
   /* cards and ingredients */
@@ -602,7 +605,7 @@ body.has-sticky{padding-bottom:74px}
   .wrap{padding:0 14px}
   .hero h1{font-size:1.95rem}
   .pricebox__now{font-size:2.05rem}
-  .assure__item h3{font-size:1.08rem}
+  .assure__num{font-size:1.08rem}
   .chatgrid{grid-template-columns:1fr}
   .chatgrid img{max-height:380px}
   .sticky__info strong{font-size:1.05rem}
