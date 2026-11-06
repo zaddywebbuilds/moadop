@@ -1,0 +1,16 @@
+{
+  "_comment": "Feed this from the CRM. While source is 'demo' the notifications render ONLY on preview hosts, never on moadop.com, so sample entries can never be shown to real customers. Set source to 'crm' once a real export is writing here.",
+  "source": "demo",
+  "orders": [
+    { "area": "Isolo, Lagos",        "minutesAgo": 3 },
+    { "area": "Garki, Abuja",        "minutesAgo": 11 },
+    { "area": "Ikeja, Lagos",        "minutesAgo": 18 },
+    { "area": "Bodija, Ibadan",      "minutesAgo": 26 },
+    { "area": "Port Harcourt",       "minutesAgo": 34 },
+    { "area": "Nyanya, Abuja",       "minutesAgo": 47 },
+    { "area": "Benin City",          "minutesAgo": 58 },
+    { "area": "Kano",                "minutesAgo": 72 },
+    { "area": "Lekki, Lagos",        "minutesAgo": 85 },
+    { "area": "Enugu",               "minutesAgo": 96 }
+  ]
+}

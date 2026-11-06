@@ -115,6 +115,49 @@ is the primary layout. Specifically handled:
 - Self-hosted fonts, preloaded hero image, lazy images, YouTube facades, no render-blocking
   third-party requests
 
+## Recent order notifications
+
+`assets/data/recent-orders.json` drives the notification in the bottom-left. It is meant
+to be fed from the CRM, which already holds the real orders.
+
+The file carries a `source` field. While it reads `demo`, the notifications render on
+preview hosts only and are **hard-blocked on moadop.com**, the same guard the order form
+uses. A notice claiming a purchase that did not happen must never reach a real customer,
+and fabricated social proof is also the kind of thing that costs a NAFDAC-registered
+brand its credibility if anyone checks. Point the file at a real export and set
+`source` to `crm`, and it starts showing genuine orders, which read better anyway because
+the places and timings vary naturally.
+
+## Contact details
+
+Taken from the live site's own policy pages, not invented:
+
+- Phone and WhatsApp: +234 913 457 4751
+- Email: info@moadop.com
+- Address: No 1 Awoyemi Junction, Ologuneru, Ibadan, Oyo State
+
+The footer links to the existing `/privacy/`, `/terms/`, `/disclaimer/` and `/policy/`
+pages on moadop.com rather than restating them, so there is one authoritative copy.
+
+Two things to resolve there:
+
+1. **The returns page is a stub.** It promises a full refund but states no window, no
+   conditions and no process. The FAQ and the schema here both say 30 days, taken from
+   the guarantee badge. Make all three agree.
+2. **The company name differs across sources.** The pack says "Moadop Global Ltd", the
+   policy pages say "Moadop Wellness Services". Pick one.
+
+## The owner's own policies already agree with this page
+
+Worth knowing before the pitch. The live Terms and Disclaimer pages say the products are
+"dietary supplements, not medical treatment" and "do not diagnose, treat, cure, or
+prevent any disease", and that statements about benefits "have not been evaluated by
+NAFDAC".
+
+The `/tst/` sales page contradicts those pages directly. So the compliant copy here is
+not an outside opinion being imposed on the business, it is the business's own published
+position, applied to the page that actually takes the money.
+
 ## Raise with the owner, in priority order
 
 **1. The NAFDAC registration expires within weeks.** Approved 2024-12-18 on what appears

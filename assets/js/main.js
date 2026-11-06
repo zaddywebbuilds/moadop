@@ -276,6 +276,58 @@
     setTimeout(function () { targets.forEach(function (t) { t.classList.add('in'); }); }, 3000);
   }
 
+  /* ---------- recent order activity ----------
+     Shows real orders exported from the CRM into recent-orders.json.
+     Sample data is allowed to render on preview hosts so the feature can be
+     demonstrated, but is hard-blocked on the live domain: a notice claiming
+     a purchase that did not happen must never reach a real customer. */
+  (function recentOrders() {
+    var box = $('#fomo');
+    if (!box) return;
+
+    var closed = false;
+    var closeBtn = $('#fomoClose');
+    if (closeBtn) closeBtn.addEventListener('click', function () {
+      closed = true; box.classList.remove('show');
+      try { sessionStorage.setItem('moadop_fomo_off', '1'); } catch (e) {}
+    });
+    try { if (sessionStorage.getItem('moadop_fomo_off')) return; } catch (e) {}
+
+    fetch('assets/data/recent-orders.json', { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (data) {
+        if (!data || !Array.isArray(data.orders) || !data.orders.length) return;
+        if (data.source !== 'crm' && IS_LIVE) return;   // never fake on production
+
+        var list = data.orders.slice();
+        var i = 0;
+
+        var ago = function (m) {
+          if (m < 1) return 'just now';
+          if (m === 1) return '1 min ago';
+          if (m < 60) return m + ' min ago';
+          var h = Math.round(m / 60);
+          return h === 1 ? 'about an hour ago' : 'about ' + h + ' hours ago';
+        };
+
+        var show = function () {
+          if (closed) return;
+          var o = list[i % list.length]; i++;
+          $('#fomoWho').textContent = 'Someone from ' + o.area;
+          $('#fomoWhen').textContent = 'Ordered this product ' + ago(o.minutesAgo);
+          box.hidden = false;
+          box.classList.add('show');
+          setTimeout(function () {
+            box.classList.remove('show');
+            if (!closed) setTimeout(show, 9000 + Math.random() * 7000);
+          }, 6000);
+        };
+
+        setTimeout(show, 7000);
+      })
+      .catch(function () { /* no data, no notifications */ });
+  })();
+
   /* ---------- fire a view event ---------- */
   track('ViewContent', { content_name: 'Moadop Herbal Tea', content_type: 'product', currency: 'NGN', value: 18500 });
 })();
