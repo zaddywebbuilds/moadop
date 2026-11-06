@@ -115,6 +115,51 @@ is the primary layout. Specifically handled:
 - Self-hosted fonts, preloaded hero image, lazy images, YouTube facades, no render-blocking
   third-party requests
 
+## Raise with the owner, in priority order
+
+**1. The NAFDAC registration expires within weeks.** Approved 2024-12-18 on what appears
+to be a two year term. The owner's own verification screenshot is cropped at "2026-" so
+the exact day is not legible from it, but a third-party audit reads the NAFDAC database as
+17 December 2026. Every trust claim on this page rests on that registration being current.
+Confirm renewal before any further ad spend.
+
+**2. Registration is not advertising approval.** Being listed in the herbal nutraceutical
+category permits the approved indication, "for clear and healthy vision". It does not
+authorise the disease claims on the current `/tst/` page, nor the claims in the existing
+ad creative (`assets/img/product-pack.jpeg`, "Perfect Remedy for: Glaucoma, Cataracts,
+Night Blindness"). That creative is deliberately unused here.
+
+**3. Verify the composition against the approved label.** The percentages here were read
+directly off the pack photograph at high magnification and sum to 100%:
+
+| Ingredient | % |
+| --- | --- |
+| Euphrasia officinalis (Eyebright) | 40 |
+| Ginkgo biloba | 20 |
+| Curcuma longa (Turmeric) | 10 |
+| Garcinia kola (Bitter Kola) | 10 |
+| Foeniculum (Fennel) | 10 |
+| Daucus carota (Carrot) | 5 |
+| Camellia sinensis (Green Tea) | 5 |
+
+An earlier revision of this page had Carrot and Bitter Kola transposed. Fixed. Worth a
+final check against the printed label the manufacturer holds.
+
+## Claims deliberately not made
+
+Each of these was available to use and was left out because it cannot be substantiated
+from anything verifiable:
+
+- **"Total value ₦53,500"**, the anchor on the original page. No basis was found for the
+  figure, so the hero now leads on the real multipack savings, which are arithmetic.
+- **"Most popular"** on the 2-pack. Invented. Removed, since no order data supports it.
+- **"Best value"** on the 3-pack. The 4-pack has the lower unit price (₦13,625 against
+  ₦14,500), so the badges now read "Full month" and "Lowest per pack", both checkable.
+- **"Verified customer"** on the voice notes. Purchase verification did not happen, so
+  they are labelled "Customer".
+
+If the owner can substantiate any of these, they can go back in.
+
 ## Assumption to confirm
 
 The returns schema states a 30 day window, taken from the 30-day guarantee badge used on
