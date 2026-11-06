@@ -115,6 +115,30 @@ is the primary layout. Specifically handled:
 - Self-hosted fonts, preloaded hero image, lazy images, YouTube facades, no render-blocking
   third-party requests
 
+## Social previews (WhatsApp, Facebook)
+
+`assets/img/og-card.jpg` is a purpose-built 1200x630 card: the hero headline, the
+NAFDAC number, the price and the pack, on the brand green. It is generated, not
+screenshotted, so it stays sharp at any preview size.
+
+Two things were wrong before and are worth knowing, because both silently kill previews:
+
+1. **og:image pointed at `https://moadop.com/assets/img/product-main.png`, which 404s.**
+   That path only exists on the GitHub Pages deployment. Sharing the link produced a
+   preview with no image at all.
+2. **The image was 648x648.** WhatsApp and Facebook want 1.91:1. A square gets cropped
+   to a small thumbnail instead of the large card.
+
+`og:url` and the canonical now point at the Pages URL too. This matters: scrapers follow
+`og:url`, so leaving it as moadop.com would make WhatsApp preview the *old* sales page
+rather than this one.
+
+**On launch**, swap `https://zaddywebbuilds.github.io/moadop/` for `https://moadop.com/`
+in the marked block in `<head>`, the canonical, and the JSON-LD `url`/`image`. Then
+re-scrape with the [Facebook Sharing Debugger](https://developers.facebook.com/tools/debug/),
+since WhatsApp and Facebook cache previews aggressively and will keep serving the old one
+otherwise.
+
 ## Performance
 
 Measured locally with everything scrolled and loaded:
